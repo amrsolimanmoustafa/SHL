@@ -37,17 +37,17 @@ export default StyleSheet.create({
 
   },
   itemStyle:{
-    marginLeft:"10%",
-    marginRight:"0%",
-    width:"75%",
+    marginLeft:"15%",
+    marginRight:"15%",
+    width:"70%",
   },
   formInputPlaceholder:{
     color:"rgb(27,118,186)",
     textAlign:"center",
     fontWeight:"500",
-    marginLeft:"63%",
+    marginLeft:"30%",
     marginRight:"0%",
-    fontSize:20,
+    fontSize:24,
     marginTop:"0%",
     fontFamily:"NeoSansArabic",
 
@@ -62,35 +62,24 @@ export default StyleSheet.create({
     borderBottomColor:"black",
     
   },
-  countryView:{
-    flexDirection:"column",
-    borderBottomWidth:2,
-    marginLeft:"5%",
-    marginRight:"10%"
-
-  },
-  countryText:{
-    color:"rgb(27,118,186)",
-    marginTop:"0%",
-    fontWeight:"500",
-    textAlign:"center",
-    marginRight:"5%",
-    fontFamily:"NeoSansArabic",
-    fontSize:20
-  },
-  countryFlag:{
-    width:"100%",
-    height:29,
-    marginTop:"0%",
-    marginBottom:"0%"
-  },
   opacity: {
-    marginTop:"2%",
+    marginTop:"1%",
     borderRadius: 80,
-    width:"90%",
-    height:"60%",
+    width:"80%",
+    height:"40%",
     
   },
-
-  
+  radioButton:{
+    flexDirection:"row",
+    marginTop:"5%",
+  },
+  radioButtonText:{
+    fontSize:20,
+  },
+  radioButtonTextBlue:{
+    color:"rgb(27,118,186)",
+    fontSize:20,
+    textDecorationLine:"underline",
+    marginLeft:"15%"
+  },
 })
