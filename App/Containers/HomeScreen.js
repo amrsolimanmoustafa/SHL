@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { View, Text, KeyboardAvoidingView } from 'react-native'
+import { View, Text, KeyboardAvoidingView,ImageBackground } from 'react-native'
 import { connect } from 'react-redux'
-import MapView from 'react-native-maps';
+import {Images} from '../Themes';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
 // Styles
 import styles from './Styles/HomeScreenStyle'
+import Header from "../Components/Header"
+import Map from '../Components/Map';
+
 
 class HomeScreen extends Component {
  
@@ -14,16 +17,15 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
-        <MapView
-          style={styles.map}
-          initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}>
-        </MapView>
+      <View style={styles.container}>
+       <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={'cover'}>
+        <Header/>
+        
+        <View style={styles.Map}>
+          <Map/>
+        </View>
+
+       </ImageBackground> 
       </View>
     );
   }

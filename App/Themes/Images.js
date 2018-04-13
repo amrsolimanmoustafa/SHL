@@ -24,7 +24,9 @@ const images = {
   loginLogo:require('../Images/Assets/loginLogo.png'),
   SaudiFlag:require('../Images/Assets/SaudiFlag.png'),
   USFlag:require('../Images/Assets/USFlag.png'),
-  IndiaFlag:require('../Images/Assets/IndiaFlag.png')
+  IndiaFlag:require('../Images/Assets/IndiaFlag.png'),
+  User:require("../Images/Assets/userHead.png"),
+  logoCenter:require("../Images/Assets/logoCenter.png")
 }
 
 export default images
