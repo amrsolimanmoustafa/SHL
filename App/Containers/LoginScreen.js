@@ -13,11 +13,11 @@ import {Images} from '../Themes';
 //auth api
 import Auth from '../APIs/Auth'
 class LoginScreen extends Component {
-  constructor(){
-    super()
+  // constructor(){
+  //   super()
 
 
-  }
+  // }
   render () {
 
    let auth= new Auth
@@ -51,14 +51,15 @@ class LoginScreen extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)
+// export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)
+export default LoginScreen;

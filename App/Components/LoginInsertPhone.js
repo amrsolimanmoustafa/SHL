@@ -35,7 +35,10 @@ import Auth from "../APIs/Auth";
    //   someSetting: false
    // }
 
-   componentWillMount() {}
+   componentWillMount() {
+     console.log(this.props);
+
+   }
    render() {
      return <View style={styles.container}>
          {/* Headings */}

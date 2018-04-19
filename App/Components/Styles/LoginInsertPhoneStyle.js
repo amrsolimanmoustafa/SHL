@@ -33,7 +33,7 @@ export default StyleSheet.create({
   inputBoxView:{
     flexDirection:"row",
     marginTop:"3%",
-   
+
 
   },
   itemStyle:{
@@ -60,7 +60,7 @@ export default StyleSheet.create({
     padding:0,
     borderBottomWidth:1,
     borderBottomColor:"black",
-    
+
   },
   countryView:{
     flexDirection:"column",
@@ -89,8 +89,8 @@ export default StyleSheet.create({
     borderRadius: 80,
     width:"90%",
     height:"60%",
-    
+
   },
 
-  
+
 })

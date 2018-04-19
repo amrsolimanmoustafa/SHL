@@ -1,6 +1,15 @@
-import './App/Config/ReactotronConfig'
-import { AppRegistry } from 'react-native'
-import App from './App/Containers/App'
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
+import App from './App/Containers/RootContainer';
+import configureStore from './src/store/configureStore';
 
+const store = configureStore();
 
-AppRegistry.registerComponent('SHL', () => App)
+const RNRedux = () => (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+
+AppRegistry.registerComponent('rncourse', () => RNRedux);
