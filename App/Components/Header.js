@@ -4,7 +4,7 @@ import { View, Text,TouchableOpacity,Image } from 'react-native'
 import styles from './Styles/HeaderStyle'
 import  { Button,Icon } from "native-base"
 import {Images} from '../Themes';
-
+ 
 export default class Header extends Component {
   // // Prop type warnings
   // static propTypes = {

@@ -1,47 +1,30 @@
+import React, { Component } from 'react'
+import { View, StatusBar } from 'react-native'
+import ReduxNavigation from '../Navigation/ReduxNavigation'
+import { connect } from 'react-redux'
+import StartupActions from '../Redux/StartupRedux'
 
-import { Navigation } from "react-native-navigation";
-import { Provider } from "react-redux";
+// Styles
+import styles from './Styles/RootContainerStyles'
 
-import AuthScreen from "./LoginScreen";
-import SharePlaceScreen from "../../src/screens/SharePlace/SharePlace";
-import FindPlaceScreen from "../../src/screens/FindPlace/FindPlace";
-import PlaceDetailScreen from "../../src/screens/PlaceDetail/PlaceDetail";
-import SideDrawer from "../../src/screens/SideDrawer/SideDrawer";
-import configureStore from "../../src/store/configureStore";
-
-const store = configureStore();
-
-// Register Screens
-Navigation.registerComponent(
-  "awesome-places.AuthScreen",
-  () => AuthScreen,
-  store,
-  Provider
-);
-Navigation.registerComponent(
-  "awesome-places.SharePlaceScreen",
-  () => SharePlaceScreen,
-  store,
-  Provider
-);
-Navigation.registerComponent(
-  "awesome-places.FindPlaceScreen",
-  () => FindPlaceScreen,
-  store,
-  Provider
-);
-Navigation.registerComponent(
-  "awesome-places.PlaceDetailScreen",
-  () => PlaceDetailScreen,
-  store,
-  Provider
-);
-Navigation.registerComponent("awesome-places.SideDrawer", () => SideDrawer);
-
-// Start a App
-Navigation.startSingleScreenApp({
-  screen: {
-    screen: "awesome-places.AuthScreen",
-    title: "Login"
+class RootContainer extends Component {
+  componentDidMount () {
+    this.props.startup()
   }
-});
+
+  render () {
+    return (
+      <View style={styles.applicationView}>
+        <StatusBar barStyle='light-content' />
+        <ReduxNavigation />
+      </View>
+    )
+  }
+}
+
+// wraps dispatch to create nicer functions to call within our component
+const mapDispatchToProps = (dispatch) => ({
+  startup: () => dispatch(StartupActions.startup())
+})
+
+export default connect(null, mapDispatchToProps)(RootContainer)
