@@ -35,9 +35,10 @@
     "react-native-maps": "^0.16.4",
     "react-native-simple-toast": "0.0.8",
     "react-navigation": "1.0.0-beta.26",
-    "react-redux": "^5.0.6",
+    "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
     "reduxsauce": "0.7.0",
     "seamless-immutable": "^7.1.2",
     "watchman": "^1.0.0"
