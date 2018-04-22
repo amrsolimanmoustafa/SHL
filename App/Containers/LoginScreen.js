@@ -17,6 +17,8 @@ class LoginScreen extends Component {
     super()
 
 
+
+
   }
   render () {
 
@@ -44,6 +46,7 @@ class LoginScreen extends Component {
                 <Text style={styles.flagTextStyle}>العربية</Text>
                 <Image source={Images.SaudiFlag} style={styles.flagStyle} />
               </TouchableOpacity>
+
             </View>
           </View>
         </ImageBackground>
