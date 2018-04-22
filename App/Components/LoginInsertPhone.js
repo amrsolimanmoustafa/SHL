@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  ActivityIndicator
-} from "react-native";
+import { View, Text ,Image,TouchableOpacity } from 'react-native'
 //Styles
 import styles from './Styles/LoginInsertPhoneStyle'
 //Native Base For UI Elements
@@ -15,12 +9,6 @@ import {Form,Label,Input,Item} from "native-base"
 import {Images} from '../Themes';
 //Two Linear Gradients
 import  LinearGradientButton  from "../Components/LinearGradientButton";
-//services
-import Base from "../APIs/Base"
-import axios from 'axios';
-import { withNavigation } from "react-navigation";
-import Toast from "react-native-simple-toast";
-import Auth from "../APIs/Auth";
 
  class LoginInsertPhone extends Component<props> {
    state = { token_id:'',lang_id:'',phone: "", logedIn: null, loading: false, VerifyPhoneScreen: "", error: "" };
