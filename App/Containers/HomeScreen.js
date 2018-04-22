@@ -23,6 +23,7 @@ class HomeScreen extends Component {
         
         <View style={styles.Map}>
           <Map/>
+          
         </View>
 
        </ImageBackground> 
