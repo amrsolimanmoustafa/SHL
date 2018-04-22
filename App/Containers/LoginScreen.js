@@ -28,7 +28,7 @@ class LoginScreen extends Component {
             <Image source={Images.loginLogo} style={styles.loginLogo} />
 
             <View style={styles.input}>
-              <LoginInsertPhone />
+              <LoginInsertPhone context={this} />
             </View>
 
             <View style={styles.allLanguages}>

@@ -35,7 +35,10 @@ import Auth from "../APIs/Auth";
    //   someSetting: false
    // }
 
-   componentWillMount() {}
+   componentWillMount() {
+    console.log(this.props.context)
+
+   }
    render() {
      return <View style={styles.container}>
          {/* Headings */}
@@ -84,7 +87,7 @@ import Auth from "../APIs/Auth";
      let base = new Base();
 
      let data = { phone: phone, token_id: token_id, lang_id: base.lang };
-auth.login(data,this);
+auth.login(data,this.props.context);
 console.log(this.state);
      // Default options are marked with *
      this.setState({ loading: true });
