@@ -40,7 +40,7 @@ class LoginScreen extends Component {
                 <Text style={styles.flagTextStyle}>English</Text>
                 <Image source={Images.USFlag} style={styles.flagStyle} />
               </TouchableOpacity>
-              <TouchableOpacity style={styles.languages}>
+              <TouchableOpacity onPress={this.goToHomeScreen.bind(this)} navigateScreen="HomeScreen" style={styles.languages}>
                 <Text style={styles.flagTextStyle}>العربية</Text>
                 <Image source={Images.SaudiFlag} style={styles.flagStyle} />
               </TouchableOpacity>
@@ -48,6 +48,12 @@ class LoginScreen extends Component {
           </View>
         </ImageBackground>
       </View>;
+  }
+  goToHomeScreen() {
+    var self=this
+
+  self.props.navigation.navigate("HomeScreen");
+
   }
 }
 
