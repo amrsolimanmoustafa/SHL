@@ -23,8 +23,8 @@ return p=new Promise((resolve,reject)=>{
               loading: false,
               VerifyPhoneScreen: "VerifyPhoneScreen"
             });
-            context.props.navigation.navigate("VerifyPhoneScreen", data);
-
+            context.props.navigation.navigate("VerifyPhoneScreen", user);
+resolve(user)
             //  navigate(self.state.VerifyPhoneScreen);
           } else {
             context.setState({ loading: false });
