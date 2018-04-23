@@ -15,9 +15,19 @@ import { connect } from 'react-redux'
 import {loginUser} from "../../src/actions/authAction"
 
  class VerifyPhone extends Component {
-   componentDidMount(){
-     console.log(this.props)
+
+
+  constructor (props) {
+    super(props)
+    console.log(this.props)
+
+  }
+  componentDidMount(){
+    console.log(this.props)
    }
+
+
+
                  // // Prop type warnings
                  // static propTypes = {
                  //   someProperty: PropTypes.object,
@@ -37,7 +47,7 @@ import {loginUser} from "../../src/actions/authAction"
                        </Text>
                        <Text style={styles.heading}>
                          {" "}
-
+{this.props.user_phone}
                         {" "}
                        </Text>
 
@@ -89,9 +99,11 @@ import {loginUser} from "../../src/actions/authAction"
               //  export default  withNavigation(VerifyPhone)
               const mapStateToProps = state => {
                 // this.props=state.auth.user.data
-                console.log( state.auth.user)
+                let v=state
+                console.log(v.auth.user_phone)
                 return {
-                  user: state.auth.user
+                  user: state.auth.user.data
+                  ,user_phone:state.auth.user_phone
                 }
               }
                export default connect(mapStateToProps, { loginUser }) (withNavigation(VerifyPhone));

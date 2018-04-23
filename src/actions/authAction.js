@@ -19,11 +19,12 @@ var  LOGIN_URL="http://" + base_url.baseUrl + "login"
 
 
     try {
+
       axios
         .post(LOGIN_URL, user)
-        .then(function(user) {
+        .then((user) =>{
           if (user && user.phone !="") {
-            console.log(user);
+            // console.log(user);
             context.setState({
               loading: false,
               VerifyPhoneScreen: "VerifyPhoneScreen"
