@@ -26,11 +26,7 @@ const images = {
   USFlag:require('../Images/Assets/USFlag.png'),
   IndiaFlag:require('../Images/Assets/IndiaFlag.png'),
   User:require("../Images/Assets/userHead.png"),
-  logoCenter:require("../Images/Assets/logoCenter.png"),
-  StarLocation:require("../Images/Assets/StarLocation.png"),
-  satalite:require("../Images/Assets/satalite.png"),
-  Kabba:require("../Images/Assets/Kabba.png"),
-  locationmap:require("../Images/Assets/locationmap.png")
+  logoCenter:require("../Images/Assets/logoCenter.png")
 }
 
 export default images
