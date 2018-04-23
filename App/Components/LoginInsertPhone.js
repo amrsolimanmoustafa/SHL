@@ -52,7 +52,7 @@ import {loginUser} from "../../src/actions/authAction"
            {/* Input */}
            <Item stackedLabel style={styles.itemStyle}>
              <Label style={styles.formInputPlaceholder}>رقم الهاتف</Label>
-             <TextInput placeholder="Hre" onChangeText={text => this.setState({
+             <TextInput placeholder="" onChangeText={text => this.setState({
                    phone: text
                  })} style={styles.input} />
                  {this.props.text}
@@ -89,7 +89,7 @@ import {loginUser} from "../../src/actions/authAction"
      let data = { phone: phone, token_id: token_id, lang_id: base.lang };
 // auth.login(data,this);
 this.props.loginUser(data,this)
-console.log(this.state);
+// console.log(this.state);
      // Default options are marked with *
      this.setState({ loading: true });
      let self = this;
@@ -97,9 +97,11 @@ console.log(this.state);
    }
  }
  const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state.user)
+  // console.log(this.props)
   return {
-    user: state.user
+    user:state.auth.user,
+    posts:state.posts
   }
 }
  export default connect(mapStateToProps, { loginUser,fetchPosts }) (withNavigation(LoginInsertPhone));

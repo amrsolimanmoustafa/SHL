@@ -10,8 +10,14 @@ import {Images} from '../Themes';
 //Linear Gradients
 import  LinearGradientButton  from "../Components/LinearGradientButton";
 import { withNavigation } from "react-navigation";
+import { connect } from 'react-redux'
+
+import {loginUser} from "../../src/actions/authAction"
 
  class VerifyPhone extends Component {
+   componentDidMount(){
+     console.log(this.props)
+   }
                  // // Prop type warnings
                  // static propTypes = {
                  //   someProperty: PropTypes.object,
@@ -21,7 +27,6 @@ import { withNavigation } from "react-navigation";
                  // // Defaults for props
                  // static defaultProps = {
                  //   someSetting: false
-                 // }
 
                  render() {
                    return <View style={styles.container}>
@@ -32,7 +37,8 @@ import { withNavigation } from "react-navigation";
                        </Text>
                        <Text style={styles.heading}>
                          {" "}
-                         +9661234568{" "}
+
+                        {" "}
                        </Text>
 
                        {/* Input */}
@@ -80,5 +86,13 @@ import { withNavigation } from "react-navigation";
 
                  }
                }
-               export default  withNavigation(VerifyPhone)
+              //  export default  withNavigation(VerifyPhone)
+              const mapStateToProps = state => {
+                // this.props=state.auth.user.data
+                console.log( state.auth.user)
+                return {
+                  user: state.auth.user
+                }
+              }
+               export default connect(mapStateToProps, { loginUser }) (withNavigation(VerifyPhone));
 

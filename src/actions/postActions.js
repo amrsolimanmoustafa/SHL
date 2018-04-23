@@ -3,11 +3,13 @@ export const fetchPosts=()=>dispatch=>{
     console.log('https://jsonplaceholder.typicode.com/posts')
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then(res => res.json())
-  .then(posts =>
-    dispatch({
-      type: FETCH_POSTS,
-      payload: posts
-    })
-  );    
+  .then(posts =>{
+    console.log('posts',posts)
+  }
+    // dispatch({
+    //   type: FETCH_POSTS,
+    //   payload: posts
+    // })
+  );
 
 }
