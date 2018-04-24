@@ -5,10 +5,11 @@ export default StyleSheet.create({
     marginLeft:"90%",
     backgroundColor:"transparent",
     height:"40%",
-    width:"10%",
-    marginTop:"18%",
+    width:"15%",
+    marginTop:"10%",
     borderRadius:100,
     justifyContent:"space-between",
+    marginBottom:"0%",
 
   },
   touchable:{

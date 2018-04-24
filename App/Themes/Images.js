@@ -30,7 +30,11 @@ const images = {
   StarLocation:require("../Images/Assets/StarLocation.png"),
   satalite:require("../Images/Assets/satalite.png"),
   Kabba:require("../Images/Assets/Kabba.png"),
-  locationmap:require("../Images/Assets/locationmap.png")
+  locationmap:require("../Images/Assets/locationmap.png"),
+  pluming:require("../Images/Assets/pluming.png"),
+  pickup:require("../Images/Assets/pickup.png"),
+  waterconnect:require("../Images/Assets/waterconnect.png"),
+  stahat:require("../Images/Assets/stahat.png")
 }
 
 export default images
