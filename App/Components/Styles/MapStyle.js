@@ -12,6 +12,9 @@ export default StyleSheet.create({
   },
   map: {
     position:"absolute",
+    borderRadius:10,
+    borderWidth: 2,
+    borderColor: '#fff',
     top: 0,
     left: 0,
     right: 0,

@@ -21,8 +21,11 @@ export default StyleSheet.create({
     marginTop:"4%",
   },
   input:{
-    // ÷position:"absolute",
-    marginTop:"45%",
+    // position:"absolute",
+    borderRadius:10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    marginTop:"10%",
     height:"45%",
     alignItems:"center",
     marginLeft:"5%",
@@ -40,14 +43,14 @@ export default StyleSheet.create({
   languages:{
     flexDirection:"row",
     width:"20%",
-    marginTop:"90%",
+    // marginTop:"5%",
     marginLeft:"5%",
     height:"10%",
     marginRight:"10%",
   },
   flagStyle:{
-    width:"70%",
-    height:"100%",
+    width:"50%",
+    height:"80%",
     marginRight:"10%",
     marginLeft:"0%"
   },
@@ -59,7 +62,7 @@ export default StyleSheet.create({
     marginLeft:"0%"
   },
   allLanguages:{
-    marginTop:"20%",
+    marginTop:"10%",
     flexDirection:"row",
     width:"80%",
     height:"100%",
