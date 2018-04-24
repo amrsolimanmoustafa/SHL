@@ -21,7 +21,7 @@ export default StyleSheet.create({
     marginTop:"4%",
   },
   input:{
-    position:"absolute",
+    // position:"absolute",
     marginTop:"45%",
     height:"45%",
     alignItems:"center",
