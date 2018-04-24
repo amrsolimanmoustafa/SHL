@@ -22,7 +22,9 @@ import axios from 'axios';
 import { withNavigation } from "react-navigation";
 import Toast from "react-native-simple-toast";
 import Auth from "../APIs/Auth";
-
+import { connect } from 'react-redux'
+import { fetchPosts } from "../../src/actions/postActions";
+import {loginUser} from "../../src/actions/authAction"
  class LoginInsertPhone extends Component<props> {
    state = { token_id:'',lang_id:'',phone: "", logedIn: null, loading: false, VerifyPhoneScreen: "", error: "" };
    // // Prop type warnings
@@ -37,8 +39,7 @@ import Auth from "../APIs/Auth";
    // }
 
    componentWillMount() {
-    console.log(this.props.context)
-
+     this.props.fetchPosts();
    }
    render() {
      return <View style={styles.container}>
@@ -47,7 +48,6 @@ import Auth from "../APIs/Auth";
          <Text style={styles.heading2}>
            يجب تسجيل الدخول حتي تستطيع الاستفادة من تطبيق سهل
          </Text>
-
          <View style={styles.inputBoxView}>
            {/* Input */}
            <Item stackedLabel style={styles.itemStyle}>
@@ -87,7 +87,8 @@ import Auth from "../APIs/Auth";
      let base = new Base();
 
      let data = { phone: phone, token_id: token_id, lang_id: base.lang };
-auth.login(data,this.props.context);
+// auth.login(data,this);
+this.props.loginUser(data,this)
 console.log(this.state);
      // Default options are marked with *
      this.setState({ loading: true });
@@ -95,4 +96,12 @@ console.log(this.state);
 
    }
  }
-export default  withNavigation(LoginInsertPhone)
+ const mapStateToProps = state => {
+  console.log(state)
+  return {
+    user: state.user
+  }
+}
+ export default connect(mapStateToProps, { loginUser,fetchPosts }) (withNavigation(LoginInsertPhone));
+
+// export default  withNavigation(LoginInsertPhone)

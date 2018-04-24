@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = state => {
   console.log(state)
   return {
-    posts: state.posts.items
+    // posts: state.posts.items
   }
 }
 // export default connect(null, mapDispatchToProps)(RootContainer)
