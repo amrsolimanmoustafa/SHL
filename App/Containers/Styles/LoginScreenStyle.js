@@ -22,14 +22,10 @@ export default StyleSheet.create({
   },
   input:{
     // position:"absolute",
-<<<<<<< HEAD
     borderRadius:10,
     borderWidth: 1,
     borderColor: '#fff',
     marginTop:"10%",
-=======
-    marginTop:"45%",
->>>>>>> master
     height:"45%",
     alignItems:"center",
     marginLeft:"5%",
