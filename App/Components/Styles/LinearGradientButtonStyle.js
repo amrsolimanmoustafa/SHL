@@ -28,7 +28,7 @@ export default StyleSheet.create({
   },
   buttonText: {
     fontSize: 19,
-    fontFamily: 'NeoSansArabic',
+    // fontFamily: 'NeoSansArabic',
     textAlign: 'center',
     margin: 10,
     color: '#ffffff',

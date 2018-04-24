@@ -18,7 +18,7 @@ export default StyleSheet.create({
     fontSize:20,
     fontWeight:"600",
     marginTop:"3%",
-    fontFamily:"NeoSansArabic",
+    // fontFamily:"NeoSansArabic",
   },
   heading2:{
     color:"rgb(112,112,112)",
@@ -28,7 +28,7 @@ export default StyleSheet.create({
     marginTop:"3%",
     marginRight:"5%",
     fontWeight:"500",
-    fontFamily:"NeoSansArabic",
+    // fontFamily:"NeoSansArabic",
   },
   inputBoxView:{
     flexDirection:"row",
@@ -49,17 +49,17 @@ export default StyleSheet.create({
     marginRight:"0%",
     fontSize:20,
     marginTop:"0%",
-    fontFamily:"NeoSansArabic",
+    // fontFamily:"NeoSansArabic",
 
   },
   input:{
     width:"100%",
     color:"rgb(27,118,186)",
     height:"100%",
-    marginTop:"1%",
+    // marginTop:"1%",
     padding:0,
-    borderBottomWidth:1,
-    borderBottomColor:"black",
+    // borderBottomWidth:1,
+    // borderBottomColor:"black",
     
   },
   countryView:{
@@ -75,7 +75,7 @@ export default StyleSheet.create({
     fontWeight:"500",
     textAlign:"center",
     marginRight:"5%",
-    fontFamily:"NeoSansArabic",
+    // fontFamily:"NeoSansArabic",
     fontSize:20
   },
   countryFlag:{

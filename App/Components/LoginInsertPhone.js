@@ -5,7 +5,8 @@ import {
   Text,
   Image,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  TextInput
 } from "react-native";
 //Styles
 import styles from './Styles/LoginInsertPhoneStyle'
@@ -51,11 +52,10 @@ import Auth from "../APIs/Auth";
            {/* Input */}
            <Item stackedLabel style={styles.itemStyle}>
              <Label style={styles.formInputPlaceholder}>رقم الهاتف</Label>
-             <Input onChangeText={text => this.setState({
+             <TextInput placeholder="Hre" onChangeText={text => this.setState({
                    phone: text
-                 })} style={styles.input}>
-               {this.props.text}
-             </Input>
+                 })} style={styles.input} />
+                 {this.props.text}
            </Item>
            {/* Flags */}
            <View style={styles.countryView}>
