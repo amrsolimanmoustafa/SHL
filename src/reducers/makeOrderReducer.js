@@ -1,14 +1,12 @@
-import {FETCH_POSTS,LOGIN} from '../actions/types'
+import {GETSERVESIES} from '../actions/types'
 const initialState={
-    user:[],
-    user_phone:''
-
+    services:[]
 }
 export default function(state=initialState,action){
     switch(action.type){
-        case LOGIN:
+        case GETSERVESIES:
         return {...state,
-          user:action.payload,user_phone:action.payload.data.phone}
+            services:action.payload}
         default:
         return state;
     }

@@ -10,11 +10,18 @@ import styles from './Styles/HomeScreenStyle'
 import Header from "../Components/Header"
 import Map from '../Components/Map';
 
+import {getServices} from "../../src/actions/makeOrderAction"
+import { withNavigation } from "react-navigation";
 
-class HomeScreen extends Component {
- 
+class HomeScreen extends Component  {
+  constructor(){
+    super()
 
 
+  }
+  componentWillMount() {
+    this.props.getServices()
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -32,14 +39,13 @@ class HomeScreen extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
+console.log(state.makeOrder.services.data)
   return {
+    services:state.makeOrder.services.data }
   }
-}
-
 const mapDispatchToProps = (dispatch) => {
   return {
   }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)
+export default connect(mapStateToProps, { getServices }) (withNavigation(HomeScreen))
