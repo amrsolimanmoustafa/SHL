@@ -30,6 +30,7 @@
     "ramda": "^0.25.0",
     "react": "16.0.0",
     "react-native": "0.50.4",
+    "react-native-cli": "^2.0.1",
     "react-native-config": "^0.10.0",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-maps": "^0.16.4",

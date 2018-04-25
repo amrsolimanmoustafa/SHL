@@ -7,6 +7,7 @@ import { Icon, Button } from 'native-base';
 import {Images} from '../Themes';
 import SideMapButtons from "../Components/SideMapButtons"
 import MainButtons from "../Components/MainButtons"
+import OtlobMain from "../Components/OtlobMain"
 
 export default class Map extends Component {
   // // Prop type warnings
@@ -32,12 +33,8 @@ export default class Map extends Component {
             longitudeDelta: 0.0421,
           }}>
         </MapView>
-        <TouchableOpacity style={styles.searchTouchable}>
-          <Text style={styles.searchTouchableText}> البحث </Text>
-          <Icon name="search" type="EvilIcons" style={styles.searchTouchableIcon}/>
-        </TouchableOpacity>
-          <SideMapButtons/>
-          <MainButtons/>
+          <OtlobMain/>
+           
       </View>
     )
   }

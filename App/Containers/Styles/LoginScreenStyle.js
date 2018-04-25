@@ -42,31 +42,31 @@ export default StyleSheet.create({
   },
   languages:{
     flexDirection:"row",
-    width:"20%",
+    width:"30%",
     // marginTop:"5%",
-    marginLeft:"5%",
-    height:"10%",
-    marginRight:"10%",
+    marginLeft:"0%",
+    height:"12%",
+    marginRight:"0%",
   },
   flagStyle:{
-    width:"50%",
-    height:"80%",
-    marginRight:"10%",
+    width:"40%",
+    height:"100%",
     marginLeft:"0%"
   },
   flagTextStyle:{
     fontSize:17,
     color:"black",
     marginTop:"15%",
-    marginRight:"0%",
+    marginRight:"4%",
     marginLeft:"0%"
   },
   allLanguages:{
     marginTop:"10%",
     flexDirection:"row",
-    width:"80%",
+    width:"100%",
     height:"100%",
-    marginLeft:"10%"
+    marginLeft:"0%",
+    justifyContent:"center"
   }
 
 })
