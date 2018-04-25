@@ -8,7 +8,7 @@ import {Images} from '../Themes';
 import SideMapButtons from "../Components/SideMapButtons"
 import MainButtons from "../Components/MainButtons"
 import OtlobMain from "../Components/OtlobMain"
-
+import OtlobNow from "../Components/OtlobNow"
 export default class Map extends Component {
   // // Prop type warnings
   // static propTypes = {
@@ -34,7 +34,8 @@ export default class Map extends Component {
           }}>
         </MapView>
           <OtlobMain/>
-           
+          {/* <OtlobNow/> */}
+
       </View>
     )
   }

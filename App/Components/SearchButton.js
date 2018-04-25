@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types';
-import { View, Text,TouchableOpacity } from 'react-native'
-import styles from './Styles/OtlobMainStyle'
-import SideMapButtons from "../Components/SideMapButtons"
-import MainButtons from "../Components/MainButtons"
+import { View, Text, TouchableOpacity } from 'react-native'
+import styles from './Styles/SearchButtonStyle'
 import {Icon} from "native-base"
-import SearchButton from "../Components/SearchButton"
-export default class OtlobMain extends Component {
+
+export default class SearchButton extends Component {
   // // Prop type warnings
   // static propTypes = {
   //   someProperty: PropTypes.object,
@@ -21,9 +19,10 @@ export default class OtlobMain extends Component {
   render () {
     return (
       <View style={styles.container}>
-          <SearchButton/>
-          <SideMapButtons/>
-          <MainButtons/>
+        <TouchableOpacity style={styles.searchTouchable}>
+          <Text style={styles.searchTouchableText}> البحث </Text>
+          <Icon name="search" type="EvilIcons" style={styles.searchTouchableIcon}/>
+        </TouchableOpacity>
       </View>
     )
   }
