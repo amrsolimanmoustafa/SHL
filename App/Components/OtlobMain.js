@@ -4,7 +4,6 @@ import { View, Text,TouchableOpacity } from 'react-native'
 import styles from './Styles/OtlobMainStyle'
 import SideMapButtons from "../Components/SideMapButtons"
 import MainButtons from "../Components/MainButtons"
-import {Icon} from "native-base"
 import SearchButton from "../Components/SearchButton"
 export default class OtlobMain extends Component {
   // // Prop type warnings

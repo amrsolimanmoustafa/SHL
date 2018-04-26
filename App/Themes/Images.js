@@ -34,7 +34,8 @@ const images = {
   pluming:require("../Images/Assets/pluming.png"),
   pickup:require("../Images/Assets/pickup.png"),
   waterconnect:require("../Images/Assets/waterconnect.png"),
-  stahat:require("../Images/Assets/stahat.png")
+  stahat:require("../Images/Assets/stahat.png"),
+  MainSarf:require("../Images/Assets/MainSarf.png")
 }
 
 export default images

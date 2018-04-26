@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
   container: {
     height:"6%",
-    width:"100%"
+    width:"100%",
+    marginBottom:"5%"
   },
   searchTouchable:{
     flexDirection:"row",

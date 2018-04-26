@@ -33,8 +33,8 @@ export default class Map extends Component {
             longitudeDelta: 0.0421,
           }}>
         </MapView>
-          <OtlobMain/>
-          {/* <OtlobNow/> */}
+          {/* <OtlobMain/> */}
+          <OtlobNow/>
 
       </View>
     )

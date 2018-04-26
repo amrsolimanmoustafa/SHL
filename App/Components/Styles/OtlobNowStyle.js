@@ -6,5 +6,10 @@ export default StyleSheet.create({
     width:"90%",
     height:"100%",
   },
+  main:{
+    flexDirection:"row",
+    width:"100%",
+    height:"60%",
+  },
   
 })
