@@ -3,7 +3,8 @@ export default class Base {
                  constructor() {
 
                  }
-                 baseUrl = "www.shl-app.com/api/";
+                 baseUrl = 'www.shl-app.com/api/';
+                 icon_url='http://www.shl-app.com/';
                  lang = "1";
                  baseUrlWithLang() {
                    return baseUrl + lang + "/";
