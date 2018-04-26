@@ -9,6 +9,7 @@ export default StyleSheet.create({
     bottom: 0,
     justifyContent: 'flex-start',
     alignItems: 'center',
+    borderRadius:10
   },
   map: {
     position:"absolute",
