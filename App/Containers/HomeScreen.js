@@ -27,13 +27,13 @@ class HomeScreen extends Component  {
       <View style={styles.container}>
        <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={'cover'}>
         <Header/>
-        
+
         <View style={styles.Map}>
           <Map/>
-          
+
         </View>
 
-       </ImageBackground> 
+       </ImageBackground>
       </View>
     );
   }

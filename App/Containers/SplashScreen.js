@@ -16,7 +16,7 @@ setTimeout(() => navigate("LoginScreen", {screen: "LoginScreen"}),40);
   }
   render () {
     return (
-    
+
       <Image source ={require("../Images/Assets/Splash.png")}
       style={styles.backgroundImage}
       resizeMode={"cover"}

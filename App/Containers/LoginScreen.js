@@ -12,9 +12,12 @@ import styles from './Styles/LoginScreenStyle'
 import {Images} from '../Themes';
 //auth api
 import Auth from '../APIs/Auth'
+import * as Animatable from "react-native-animatable";
+
 class LoginScreen extends Component {
   constructor(){
     super()
+LoginScreen = Animatable.createAnimatableComponent(LoginScreen);
 
 
   }
@@ -23,16 +26,20 @@ class LoginScreen extends Component {
    let auth= new Auth
   //  console.log(auth.login())
     return <View style={styles.container}>
-        <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={"cover"}>
-          <View style={styles.main}>
-            <Image source={Images.loginLogo} style={styles.loginLogo} />
 
+
+        <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={"cover"}>
+
+          <Animatable.View animation="fadeInLeftBig" iterationCount={1} direction="alternate" style={styles.main}>
+            <Animatable.Image source={Images.loginLogo} style={styles.loginLogo} animation="bounceIn" iterationCount={9} direction="alternate" resizeMode={"cover"} />
+            {/* <Image source={Images.loginLogo} style={styles.loginLogo} /> */}
             <View style={styles.input}>
               <LoginInsertPhone />
             </View>
-
             <View style={styles.allLanguages}>
-              <TouchableOpacity onPress={()=>{this.base}} style={styles.languages}>
+              <TouchableOpacity onPress={() => {
+                  this.base;
+                }} style={styles.languages}>
                 <Text style={styles.flagTextStyle}>اردو</Text>
                 <Image source={Images.IndiaFlag} style={styles.flagStyle} />
               </TouchableOpacity>
@@ -45,7 +52,7 @@ class LoginScreen extends Component {
                 <Image source={Images.SaudiFlag} style={styles.flagStyle} />
               </TouchableOpacity>
             </View>
-          </View>
+          </Animatable.View>
         </ImageBackground>
       </View>;
   }
