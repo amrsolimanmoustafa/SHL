@@ -10,7 +10,11 @@ import MainButtons from "../Components/MainButtons"
 import OtlobMain from "../Components/OtlobMain"
 import OtlobNow from "../Components/OtlobNow"
 import FavoritePlaces from "../Components/FavoritePlaces"
-export default class Map extends Component {
+import {reverseCoordinatesToAdress} from "../../src/actions/CommonServicesActions/commonServicesActions"
+import { connect } from 'react-redux'
+import { withNavigation } from "react-navigation";
+
+class Map extends Component {
   // // Prop type warnings
   // static propTypes = {
   //   someProperty: PropTypes.object,
@@ -21,15 +25,20 @@ export default class Map extends Component {
   // static defaultProps = {
   //   someSetting: false
   // }
+  constructor(props) {
+    super(props);
+  
+  }
 
   render () {
+    console.log('lat ',this.props.lat)
     return (
       <View style={styles.container}>
        <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: this.props.lat? this.props.lat:6.2672295570373535,
+            longitude:this.props.lng? this.props.lng:31.229478498675235,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}>
@@ -42,3 +51,9 @@ export default class Map extends Component {
     )
   }
 }
+const mapStateToProps = state => {
+  return {
+    common:state.common
+   }
+  }
+export default connect(mapStateToProps, {reverseCoordinatesToAdress }) (withNavigation(Map))

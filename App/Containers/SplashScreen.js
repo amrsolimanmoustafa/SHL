@@ -6,21 +6,34 @@ import { connect } from 'react-redux'
 
 // Styles
 import styles from './Styles/SplashScreenStyle'
+import * as Animatable from "react-native-animatable";
 
 
 class SplashScreen extends Component {
+  constructor(){
+    super()
+    SplashScreen = Animatable.createAnimatableComponent(SplashScreen);
+
+
+  }
   componentDidMount(){
     const { navigate } = this.props.navigation;
-setTimeout(() => navigate("LoginScreen", {screen: "LoginScreen"}),40);
+setTimeout(() => navigate("LoginScreen", {screen: "LoginScreen"}),5000);
 
   }
   render () {
     return (
 
-      <Image source ={require("../Images/Assets/Splash.png")}
+      <ImageBackground source ={require("../Images/Assets/shlSplash_bg.png")}
       style={styles.backgroundImage}
       resizeMode={"cover"}
-      />
+      >
+  <Animatable.Image
+animation="bounceIn" iterationCount={9} direction="alternate" resizeMode={"cover"}
+  source ={require("../Images/Assets/shlSplash_logo.png")}
+ 
+ resizeMode={"cover"}/>    
+      </ImageBackground>
 
     )
   }
