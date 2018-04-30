@@ -4,6 +4,7 @@ import { View, Text,TouchableOpacity,Image } from 'react-native'
 import styles from './Styles/HeaderStyle'
 import  { Button,Icon } from "native-base"
 import {Images} from '../Themes';
+import {withNavigation} from "react-navigation"
  
 export default class Header extends Component {
   // // Prop type warnings
@@ -21,7 +22,7 @@ export default class Header extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.component}>
-          <Button style={styles.headerButton} transparent>
+          <Button style={styles.headerButton} transparent onPress={()=>this.props.navigation.navigate("DrawerOpen")}>
             <Icon name="md-settings" type="Ionicons" style={styles.Icon}/>
           </Button>
         </View>
@@ -29,7 +30,7 @@ export default class Header extends Component {
           <Image source={Images.logoCenter}/>
         </View>
         <View style={styles.component}>
-          <Button style={styles.headerButton2} transparent>
+          <Button style={styles.headerButton2} transparent onPress={()=>this.props.navigation.navigate("DrawerRightOpen")}>
             <Image source={Images.User}/>
           </Button>
         </View>

@@ -26,7 +26,7 @@ class HomeScreen extends Component  {
     return (
       <View style={styles.container}>
        <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={'cover'}>
-        <Header/>
+        <Header navigation={this.props.navigation}/>
 
         <View style={styles.Map}>
           <Map/>

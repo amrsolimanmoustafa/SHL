@@ -4,7 +4,7 @@ export default StyleSheet.create({
   SideComponents:{
     marginLeft:"90%",
     backgroundColor:"transparent",
-    height:"30%",
+    height:"40%",
     width:"15%",
     marginTop:"10%",
     borderRadius:100,

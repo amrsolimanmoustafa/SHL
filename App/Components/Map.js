@@ -37,6 +37,7 @@ export default class Map extends Component {
           <OtlobMain/>
           {/* <OtlobNow/> */}
           {/* <FavoritePlaces/> */}
+          
 
       </View>
     )

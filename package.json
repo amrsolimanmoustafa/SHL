@@ -37,7 +37,7 @@
     "react-native-maps": "^0.16.4",
     "react-native-simple-toast": "0.0.8",
     "react-native-swipe-gestures": "^1.0.2",
-    "react-navigation": "1.0.0-beta.26",
+    "react-navigation": "^1.0.0-beta.26",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
