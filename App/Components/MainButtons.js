@@ -16,17 +16,29 @@ import { Images } from '../Themes';
 import Base from '../APIs/Base'
 
 import {getServices} from "../../src/actions/makeOrderAction"
+import {reverseCoordinatesToAdress} from "../../src/actions/CommonServicesActions/commonServicesActions"
 import { withNavigation } from "react-navigation";
 import { connect } from 'react-redux'
 
 import * as Animatable from "react-native-animatable";
 
   class MainButtons extends Component {
+    componentWillMount() {
+      // this.props.getServices(this.props.adress)
+      // console.log(this.props)
+      var self=this
+      this.reverseLoc().then(()=>self.props.getServices('Mohammed Farid'))
 
+    }
 state={secondryServiceIcons:[],showMainServices:false}
 constructor(props) {
   super(props);
 MainButtons = Animatable.createAnimatableComponent(MainButtons);
+
+}
+reverseLoc(){
+return new Promise((resolve,reject)=>{this.props.reverseCoordinatesToAdress('37.78825','-122.4324')
+resolve('')})
 
 }
 secondryServeciesButtons_View=()=>{
@@ -77,7 +89,7 @@ return  <View style={styles.whenToOrderView}>
    </View>
 
    <View style={styles.opacityView2}>
-     <LinearGradientForMap  text="اطلب الان" stylez={styles.opacity}  press={() => this.setState({showMainServices:true})} />
+     <LinearGradientForMap  text="اطلب الان" style={styles.opacity}  press={() => this.setState({showMainServices:true})} />
    </View>
   </View>}
 
@@ -101,13 +113,16 @@ return  <View style={styles.whenToOrderView}>
 }
 //===============================//
 const mapStateToProps = state => {
-  console.log(state.makeOrder.service)
+  // console.log(state.makeOrder.service)
     return {
+      
       services:state.makeOrder.services.data,
-      service:state.makeOrder.service }
+      service:state.makeOrder.service ,
+      common:state.common
+    }
     }
   const mapDispatchToProps = (dispatch) => {
     return {
     }
   }
-  export default connect(mapStateToProps, { getServices }) (withNavigation(MainButtons))
+  export default connect(mapStateToProps, { getServices, reverseCoordinatesToAdress}) (withNavigation(MainButtons))

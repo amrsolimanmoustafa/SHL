@@ -31,7 +31,7 @@ LoginScreen = Animatable.createAnimatableComponent(LoginScreen);
         <ImageBackground style={styles.loginBackground} source={Images.loginBackground} resizeMode={"cover"}>
 
           <Animatable.View animation="fadeInLeftBig" iterationCount={1} direction="alternate" style={styles.main}>
-            <Animatable.Image source={Images.loginLogo} style={styles.loginLogo} animation="bounceIn" iterationCount={9} direction="alternate" resizeMode={"cover"} />
+            <Animatable.Image source={Images.loginLogo} style={styles.loginLogo} animation="bounceIn" iterationCount={4} direction="alternate" resizeMode={"cover"} />
             {/* <Image source={Images.loginLogo} style={styles.loginLogo} /> */}
             <View style={styles.input}>
               <LoginInsertPhone />

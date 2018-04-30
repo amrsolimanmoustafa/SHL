@@ -10,18 +10,40 @@ import styles from './Styles/HomeScreenStyle'
 import Header from "../Components/Header"
 import Map from '../Components/Map';
 
-import {getServices} from "../../src/actions/makeOrderAction"
 import { withNavigation } from "react-navigation";
+import {reverseCoordinatesToAdress,setCoordnates} from "../../src/actions/CommonServicesActions/commonServicesActions"
 
 class HomeScreen extends Component  {
-  constructor(){
-    super()
+  constructor(props) {
+    super(props);
 
+   
+  }
 
+  componentDidMount() {
+  var self=this
+    this.watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        console.log(position)
+        // this.setState({
+        //   latitude: position.coords.latitude,
+        //   longitude: position.coords.longitude,
+        //   error: null,
+        // });
+        this.props.setCoordnates(position.coords.latitude,position.coords.longitude)
+      
+      },
+      (error) => this.setState({ error: error.message }),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000, distanceFilter: 10 },
+    );
   }
-  componentWillMount() {
-    this.props.getServices()
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.watchId);
   }
+  // componentWillMount() {
+  //   this.props.getServices()
+  // }
   render() {
     return (
       <View style={styles.container}>
@@ -40,12 +62,13 @@ class HomeScreen extends Component  {
 }
 
 const mapStateToProps = state => {
-console.log(state.makeOrder.services.data)
   return {
-    services:state.makeOrder.services.data }
+    common:state.common,
+
+   }
   }
 const mapDispatchToProps = (dispatch) => {
   return {
   }
 }
-export default connect(mapStateToProps, { getServices }) (withNavigation(HomeScreen))
+export default connect(mapStateToProps, { reverseCoordinatesToAdress,setCoordnates }) (withNavigation(HomeScreen))
